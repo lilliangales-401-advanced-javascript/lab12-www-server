@@ -17,11 +17,9 @@
           let githubURL = "https://github.com/login/oauth/authorize";
 
           let options = {
-            client_id:'https://github.com/login/oauth/authorize',
-            redirect_uri: 'http://localhost:8080',
-            scope: 'email openid profile',
-            prompt: 'consent',
-            response_type: 'code'
+            client_id:'bee06d3065dd02718047', //github client id
+            redirect_uri: 'http://localhost:8080/oauth',
+            scope: 'user'
           };
 
           let QueryString = Object.keys(options).map( (key,i) => {
@@ -29,6 +27,7 @@
           }).join("&");
 
           let authURL = `${githubURL}?${QueryString}`;
+          console.log(authURL)
 
           $('#oauth').append(`<a href="${authURL}">Login With GitHub</a>`);
 

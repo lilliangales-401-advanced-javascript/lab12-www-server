@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "jest": "^24.9.0"
   }
 }
